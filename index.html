@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QFT Tour & Travel Engine</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/logo.jpg" type="image/jpg">
+
+</head>
+<body>
+
+
+    
+<!-- header section starts -->
+<header>  
+    
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+    <div class="logo"><span><i class="fab fa-quora"></i><i class="fab fa-foursquare"></i><i class="fab fa-tumblr"></i></span>  travelS</div>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#services">services</a>
+        <a href="#packages">packages</a>
+        <a href="#gallery">gallery</a>
+        <a href="#review">review</a>
+        <a href="#contact">contact</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+        <i class="fas fa-user" id="login-btn"></i>
+    </div>
+
+    <form action="" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="search here...">
+        <label for="search-bar" class="fas fa-search"></label>
+    </form>
+
+</header>
+<!-- header section ends -->
+
+
+
+<!-- login form container  starts -->
+<div class="login-form-container">
+
+    <i class="fas fa-times" id="form-close"></i>
+
+    <form action="/login" method="POST">
+        <h3>login </h3>
+        <input type="email" name ="email" class="box" placeholder="Enter your email">
+        <input type="password" name ="password" class="box" placeholder="Enter your password">
+        <input type="submit" value="login now" class="btn">
+        <input type="checkbox" id="remember">
+        <label for="remember">remember me</label>
+        <p>forget password? <a href="#">click here</a></p>
+        <p>don't have and account? <a href="#registration-form-container" class ="register-btn">register now</a></p>
+    </form>
+
+</div>
+<!-- login form container ends -->
+
+
+<!-- registration form container starts  -->
+<div class="registration-form-container" >
+    <i class="fas fa-times" id="registration-close"></i>
+    <form action="/registration" method="POST">
+        <h3>Register your self</h3>
+        <input type="text"name="fname" class="box" pattern="[A-Za-z/s].{2-15}" placeholder="First Name">
+        <input type="text"name="lname" class="box" pattern="[A-Za-z/s].{2-15}" placeholder="Last Name">
+        <input type="email" name ="email"class="box" placeholder="Email Address">
+        <input type="tel" name="contact" class="box" oninvalid="alert('plz enter correct phone no.');"  pattern="[0-9]{10}" placeholder="Contact Number">
+        <span class="radio">   Male</span><input type="radio" id="m"  name="gen" value="male">
+	    <span class="radio">   Female</span><input type="radio"  id="f" name="gen" value="female">
+        <span class="radio">   Other</span><input type="radio"  id="o" name="gen" value="Other">
+        <input type="password"  name ="password" class="box" oninvalid="alert('plz enter strong password with atleast 1 no.,1 uppercase,1 lowercase and total no. of character should be 6-20');" pattern="(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z]).{5,20}" placeholder="Password">
+        <input type="password"  name ="cpassword"class="box" placeholder="Confirm Password">
+        <input type="submit" value="Register Now" class="btn">
+    </form>
+</div>
+<!-- registration form container ends  -->
+
+
+
+<!-- home section starts  -->
+<section class="home" id="home">
+
+    <div class="content">
+        <h3><span>adventure is worthwhile in itself</span><br><span>dicover new places with us, adventure awaits</span></h3>
+        
+    </div>
+
+    <div class="video-container">
+        <video src="images/vid-2.mp4" id="video-slider" loop autoplay muted></video>
+        <a href="#registration-form-container"  id ="register-btn"class="btn" >Register</a>
+    </div>
+
+</section>
+<!-- home section ends -->
+
+
+
+
+<!-- services section starts  -->
+
+<section class="services" id="services">
+
+    <h1 class="heading">
+        <span>s</span>
+        <span>e</span>
+        <span>r</span>
+        <span>v</span>
+        <span>i</span>
+        <span>c</span>
+        <span>e</span>
+        <span>s</span>
+    </h1>
+
+    <div class="box-container">
+        <div class="box">
+            <i class="fas fa-plane" id="plane"></i>
+            <h3>Flights</h3>
+            <p>Fine comfortable flight for yourself according to your needs , budget and time </p>
+        </div>
+        <div class="box">
+            <i class="fa fa-train" id="train"></i>
+            <h3>Trains</h3>
+            <p>Fine comfortable train for yourself according to your needs , budget and time </p>
+        </div>
+        <div class="box">
+            <i class="fa fa-bus" id="bus"></i>
+            <h3>Buses</h3>
+            <p>Fine comfortable buses for yourself according to your needs , budget and time </p>
+        </div>
+        <div class="box">
+            <i class="fa fa-taxi" id="taxi"></i>
+            <h3>Cabs</h3>
+            <p>Fine comfortable cab for yourself according to your needs , budget and time </p>
+        </div> 
+        <div class="box">
+            <i class="fa fa-ship" id="ship"></i>
+            <h3>House Boats</h3>
+            <p>Fine comfortable house boats for yourself according to your needs , budget and time </p>
+        </div>  
+        <div class="box">
+            <i class="fas fa-hotel" id="hotel"></i>
+            <h3>Hotels</h3>
+            <p>Fine comfortable hotel for yourself according to your needs , budget and time </p>
+        </div>      
+    </div>
+
+</section>
+
+<!-- services section ends -->
+
+
+
+
+
+<!-- packages section starts  -->
+
+<section class="packages" id="packages">
+
+    <h1 class="heading">
+        <span>p</span>
+        <span>a</span>
+        <span>c</span>
+        <span>k</span>
+        <span>a</span>
+        <span>g</span>
+        <span>e</span>
+        <span>s</span>
+    </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/p-1.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> gulmarg </h3>
+                <p>Gulmarg is a town, a hill station, a popular skiing destination and a notified area committee in Baramula district in the Indian state of Jammu and…</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> Rs:10000 <span>Rs: 12000</span> </div>
+                <a href="#book" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/p-2.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> manasbal lake </h3>
+                <p>Manasbal Lake is located in the Jhelum valley, north of Srinagar city in the State of Jammu and Kashmir in India. The name Manasbal is said to be a…</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> RS:70000 <span>RS:10000</span> </div>
+                <a href="#book" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/p-3.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> pahalgam </h3>
+                <p>Pahalgam is a town and a Municipal committee in Anantnag district in India's northernmost state of Jammu and Kashmir. It is a popular tourist…</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price">Rs:15000 <span>Rs:20000</span> </div>
+                <a href="#book" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/p-4.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> aharbal </h3>
+                <p>Gradually, the distant rumble becomes a roar as one approach the waterfall of Aharbal, which crashes down a narrow gorge. Aharbal is more than just…</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> Rs:14000 <span>Rs:17000</span> </div>
+                <a href="#book" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/p-5.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> sonamarg </h3>
+                <p>Sonamarg is a hill station in Ganderbal district in the Indian state of Jammu and Kashmir. Sonamarg gives rise to The Three Sisters (Kashmir).</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price">Rs:15000 <span>Rs:17000</span> </div>
+                <a href="#book" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/p-6.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> mughal gardens </h3>
+                <p>The Mughal Gardens comprise of three small gardens - the Chashmashahi Garden, Nishat Garden and the Shalimar Garden. The spectacular beauty of these…</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> Rs:10000 <span>Rs:12000</span> </div>
+                <a href="#book" class="btn">book now</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- packages section ends -->
+
+
+
+
+<!-- book section starts  -->
+
+<section class="book" id="book">
+    
+    <i class="fas fa-times" id="book-close"></i>
+
+    <div class="row">
+        
+        <form action="">
+            <div class="inputBox">
+                <h3>Where to</h3>
+                <input type="text" placeholder="Place name">
+            </div>
+            <div class="inputBox">
+                <h3>Destination</h3>
+                <input type="text" placeholder="Place name">
+            </div>
+            <div class="inputBox">
+                <h3>How many</h3>
+                <input type="number" placeholder="Number of guests">
+            </div>
+            <div class="inputBox">
+                <h3>Arrivals</h3>
+                <input type="date">
+            </div>
+            <div class="inputBox">
+                <h3>Leaving</h3>
+                <input type="date">
+            </div>
+            <input type="submit" class="btn" value="book now">
+        </form>
+
+    </div>
+
+</section>
+
+<!-- book section ends -->
+
+
+
+<!-- gallery section starts  -->
+
+<section class="gallery" id="gallery">
+
+    <h1 class="heading">
+        <span>g</span>
+        <span>a</span>
+        <span>l</span>
+        <span>l</span>
+        <span>e</span>
+        <span>r</span>
+        <span>y</span>
+    </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/gall-1.jpg" alt="">
+            <div class="content">
+                <h3>Kashmir</h3><hr>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/gall-2.jpg" alt="">
+            <div class="content">
+                <h3>Geo</h3><hr>
+                 <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/gall-3.jpg" alt="">
+            <div class="content">
+                <h3>Amritsar</h3><hr>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/gall-4.jpg" alt="">
+            <div class="content">
+                <h3>Manali</h3><hr>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/gall-5.jpg" alt="">
+            <div class="content">
+                <h3>Mumbai</h3><hr>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/gall-6.jpg" alt="">
+            <div class="content">
+                <h3>Pune</h3><hr>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/gall-7.jpg" alt="">
+            <div class="content">
+                <h3>Punjab</h3><hr>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/gall-8.jpg" alt="">
+            <div class="content">
+                <h3>Shimla</h3><hr>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/gall-9.jpg" alt="">
+            <div class="content">
+                <h3>Agra</h3><hr>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<!-- gallery section ends -->
+
+
+
+<!-- review section starts  -->
+
+<section class="review" id="review">
+
+    <h1 class="heading">
+        <span>r</span>
+        <span>e</span>
+        <span>v</span>
+        <span>i</span>
+        <span>e</span>
+        <span>w</span>
+    </h1>
+
+    <div class="swiper-container review-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="images/pic1.png" alt="">
+                    <h3>neha mittalca</h3>
+                    <p>breathtaking view..must go to place when weather is just ok.../p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="images/pic2.png" alt="">
+                    <h3>john deo</h3>
+                    <p>i loved the views from here ...and will go pahalgam for sure</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="images/pic3.png" alt="">
+                    <h3>janifer</h3>
+                    <p>this was one of the best visit of my life...</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="images/pic4.png" alt="">
+                    <h3>karan deo</h3>
+                    <p>looking so amazing cannot wait to go there..... </p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- review section ends -->
+
+
+
+
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+    
+    <h1 class="heading">
+        <span>c</span>
+        <span>o</span>
+        <span>n</span>
+        <span>t</span>
+        <span>a</span>
+        <span>c</span>
+        <span>t</span>
+    </h1>
+
+    <div class="row">
+
+        <form action="mailto:bhatbenish22@gmail.com" method="post" enctype="text/plain">
+            <div class="inputBox">
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
+            </div>
+            <div class="inputBox">
+                <input type="email" placeholder="Email Address">
+            </div>
+            <div class="inputBox">
+                <input type="tel" placeholder="Contact Number">
+            </div>
+            <div class="inputBox">
+            <textarea rows="4" cols ="50"placeholder=" Enter your message here "></textarea>
+            </div>
+            <input type="submit" class="btn" value="send mail">
+        </form>
+
+    </div>
+    
+</section>
+
+<!-- contact section ends -->
+
+
+
+
+
+<!-- footer section  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>about us</h3>
+            <p>We are Btech(cse) 6th sem students and this was our minor project. in this we have learn so many new languages.</p>
+        </div>
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#">Home</a>
+            <a href="#services">Services</a>
+            <a href="#packages">Packages</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#review">Review</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="box">
+            <h3>follow us</h3>
+           <div class="foot"> 
+               <a href="#">Facebook</a>
+               <a href="#">Instagram</a>
+               <a href="#">Twitter</a>
+               <a href="#">E-mail</a>
+           </div>
+        </div>
+
+    </div>
+
+    <h1 class="credit"> created by <span> QFT Team </span> | all rights reserved! </h1>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
